@@ -93,7 +93,7 @@ M_.Correlation_matrix_ME = 1;
 M_.sigma_e_is_diagonal = true;
 M_.det_shocks = [];
 options_.linear = false;
-options_.block = false;
+options_.block = true;
 options_.bytecode = false;
 options_.use_dll = false;
 options_.linear_decomposition = false;
@@ -130,7 +130,7 @@ M_.nboth   = 0;
 M_.nsfwrd   = 3;
 M_.nspred   = 1;
 M_.ndynamic   = 4;
-M_.dynamic_tmp_nbr = [5; 5; 0; 0; ];
+M_.dynamic_tmp_nbr = [0; 0; 0; 0; ];
 M_.equations_tags = {
   1 , 'name' , '1' ;
   2 , 'name' , '2' ;
@@ -152,6 +152,138 @@ M_.mapping.A.eqidx = [4 8 ];
 M_.mapping.e.eqidx = [8 ];
 M_.static_and_dynamic_models_differ = false;
 M_.has_external_function = false;
+block_structure.block(1).Simulation_Type = 3;
+block_structure.block(1).maximum_lag = 0;
+block_structure.block(1).maximum_lead = 0;
+block_structure.block(1).maximum_endo_lag = 0;
+block_structure.block(1).maximum_endo_lead = 0;
+block_structure.block(1).maximum_exo_lag = 0;
+block_structure.block(1).maximum_exo_lead = 0;
+block_structure.block(1).maximum_exo_det_lag = 0;
+block_structure.block(1).maximum_exo_det_lead = 0;
+block_structure.block(1).endo_nbr = 1;
+block_structure.block(1).mfs = 1;
+block_structure.block(1).equation = [ 1];
+block_structure.block(1).variable = [ 3];
+block_structure.block(1).exo_nbr = 0;
+block_structure.block(1).exogenous = [];
+block_structure.block(1).exogenous_det = [];
+block_structure.block(1).exo_det_nbr = 0;
+block_structure.block(1).other_endogenous = [];
+block_structure.block(1).other_endogenous_block = [];
+block_structure.block(1).tm1 = zeros(0, 1);
+block_structure.block(1).other_endo_nbr = 0;
+block_structure.block(1).lead_lag_incidence = [];
+block_structure.block(1).lead_lag_incidence = [ block_structure.block(1).lead_lag_incidence;  0]; %lag = -1
+block_structure.block(1).lead_lag_incidence = [ block_structure.block(1).lead_lag_incidence; 1]; %lag = 0
+block_structure.block(1).lead_lag_incidence = [ block_structure.block(1).lead_lag_incidence;  0]; %lag = 1
+block_structure.block(1).sorted_col_dr_ghx = [];
+block_structure.block(1).lead_lag_incidence_other = [];
+block_structure.block(1).lead_lag_incidence_other = [ block_structure.block(1).lead_lag_incidence_other; ]; %lag = -1
+block_structure.block(1).lead_lag_incidence_other = [ block_structure.block(1).lead_lag_incidence_other; ]; %lag = 0
+block_structure.block(1).lead_lag_incidence_other = [ block_structure.block(1).lead_lag_incidence_other; ]; %lag = 1
+block_structure.block(1).n_static = 1;
+block_structure.block(1).n_forward = 0;
+block_structure.block(1).n_backward = 0;
+block_structure.block(1).n_mixed = 0;
+block_structure.block(2).Simulation_Type = 1;
+block_structure.block(2).maximum_lag = 1;
+block_structure.block(2).maximum_lead = 0;
+block_structure.block(2).maximum_endo_lag = 1;
+block_structure.block(2).maximum_endo_lead = 0;
+block_structure.block(2).maximum_exo_lag = 0;
+block_structure.block(2).maximum_exo_lead = 0;
+block_structure.block(2).maximum_exo_det_lag = 0;
+block_structure.block(2).maximum_exo_det_lead = 0;
+block_structure.block(2).endo_nbr = 1;
+block_structure.block(2).mfs = 1;
+block_structure.block(2).equation = [ 8];
+block_structure.block(2).variable = [ 8];
+block_structure.block(2).exo_nbr = 1;
+block_structure.block(2).exogenous = [ 1];
+block_structure.block(2).exogenous_det = [];
+block_structure.block(2).exo_det_nbr = 0;
+block_structure.block(2).other_endogenous = [];
+block_structure.block(2).other_endogenous_block = [];
+block_structure.block(2).tm1 = zeros(0, 1);
+block_structure.block(2).other_endo_nbr = 0;
+block_structure.block(2).lead_lag_incidence = [];
+block_structure.block(2).lead_lag_incidence = [ block_structure.block(2).lead_lag_incidence; 1]; %lag = -1
+block_structure.block(2).lead_lag_incidence = [ block_structure.block(2).lead_lag_incidence; 2]; %lag = 0
+block_structure.block(2).lead_lag_incidence = [ block_structure.block(2).lead_lag_incidence;  0]; %lag = 1
+block_structure.block(2).sorted_col_dr_ghx = [1 ];
+block_structure.block(2).lead_lag_incidence_other = [];
+block_structure.block(2).lead_lag_incidence_other = [ block_structure.block(2).lead_lag_incidence_other; ]; %lag = -1
+block_structure.block(2).lead_lag_incidence_other = [ block_structure.block(2).lead_lag_incidence_other; ]; %lag = 0
+block_structure.block(2).lead_lag_incidence_other = [ block_structure.block(2).lead_lag_incidence_other; ]; %lag = 1
+block_structure.block(2).n_static = 0;
+block_structure.block(2).n_forward = 0;
+block_structure.block(2).n_backward = 1;
+block_structure.block(2).n_mixed = 0;
+block_structure.block(3).Simulation_Type = 7;
+block_structure.block(3).maximum_lag = 0;
+block_structure.block(3).maximum_lead = 1;
+block_structure.block(3).maximum_endo_lag = 0;
+block_structure.block(3).maximum_endo_lead = 1;
+block_structure.block(3).maximum_exo_lag = 0;
+block_structure.block(3).maximum_exo_lead = 0;
+block_structure.block(3).maximum_exo_det_lag = 0;
+block_structure.block(3).maximum_exo_det_lead = 0;
+block_structure.block(3).endo_nbr = 6;
+block_structure.block(3).mfs = 6;
+block_structure.block(3).equation = [ 3 6 7 4 5 2];
+block_structure.block(3).variable = [ 5 2 7 6 4 1];
+block_structure.block(3).exo_nbr = 0;
+block_structure.block(3).exogenous = [];
+block_structure.block(3).exogenous_det = [];
+block_structure.block(3).exo_det_nbr = 0;
+block_structure.block(3).other_endogenous = [ 3];
+block_structure.block(3).other_endogenous_block = [ 1];
+block_structure.block(3).tm1 = zeros(1, 1);
+block_structure.block(3).other_endo_nbr = 1;
+block_structure.block(3).lead_lag_incidence = [];
+block_structure.block(3).lead_lag_incidence = [ block_structure.block(3).lead_lag_incidence;  0 0 0 0 0 0]; %lag = -1
+block_structure.block(3).lead_lag_incidence = [ block_structure.block(3).lead_lag_incidence; 1 2 3 4 5 6]; %lag = 0
+block_structure.block(3).lead_lag_incidence = [ block_structure.block(3).lead_lag_incidence;  0 0 0 7 8 9]; %lag = 1
+block_structure.block(3).sorted_col_dr_ghx = [];
+block_structure.block(3).lead_lag_incidence_other = [];
+block_structure.block(3).lead_lag_incidence_other = [ block_structure.block(3).lead_lag_incidence_other;  0]; %lag = -1
+block_structure.block(3).lead_lag_incidence_other = [ block_structure.block(3).lead_lag_incidence_other;  1]; %lag = 0
+block_structure.block(3).lead_lag_incidence_other = [ block_structure.block(3).lead_lag_incidence_other;  0]; %lag = 1
+block_structure.block(3).n_static = 3;
+block_structure.block(3).n_forward = 3;
+block_structure.block(3).n_backward = 0;
+block_structure.block(3).n_mixed = 0;
+M_.block_structure.block = block_structure.block;
+M_.block_structure.variable_reordered = [ 3 8 5 2 7 6 4 1];
+M_.block_structure.equation_reordered = [ 1 8 3 6 7 4 5 2];
+M_.block_structure.incidence(1).lead_lag = -1;
+M_.block_structure.incidence(1).sparse_IM = [8 8;
+];
+M_.block_structure.incidence(2).lead_lag = 0;
+M_.block_structure.incidence(2).sparse_IM = [1 3;
+2 1;
+3 5;
+3 6;
+4 2;
+4 6;
+4 7;
+5 4;
+5 6;
+5 7;
+6 2;
+6 3;
+6 7;
+7 1;
+7 5;
+7 7;
+8 8;
+];
+M_.block_structure.incidence(3).lead_lag = 1;
+M_.block_structure.incidence(3).sparse_IM = [2 1;
+2 4;
+3 6;
+];
 M_.state_var = [8 ];
 M_.exo_names_orig_ord = [1:1];
 M_.maximum_lag = 1;
@@ -165,7 +297,58 @@ oo_.exo_steady_state = zeros(1, 1);
 M_.params = NaN(6, 1);
 M_.endo_trends = struct('deflator', cell(8, 1), 'log_deflator', cell(8, 1), 'growth_factor', cell(8, 1), 'log_growth_factor', cell(8, 1));
 M_.NNZDerivatives = [25; 21; -1; ];
-M_.static_tmp_nbr = [5; 0; 0; 0; ];
+M_.static_tmp_nbr = [0; 0; 0; 0; ];
+block_structure_stat.block(1).Simulation_Type = 3;
+block_structure_stat.block(1).endo_nbr = 1;
+block_structure_stat.block(1).mfs = 1;
+block_structure_stat.block(1).equation = [ 1];
+block_structure_stat.block(1).variable = [ 3];
+block_structure_stat.block(2).Simulation_Type = 3;
+block_structure_stat.block(2).endo_nbr = 1;
+block_structure_stat.block(2).mfs = 1;
+block_structure_stat.block(2).equation = [ 2];
+block_structure_stat.block(2).variable = [ 4];
+block_structure_stat.block(3).Simulation_Type = 3;
+block_structure_stat.block(3).endo_nbr = 1;
+block_structure_stat.block(3).mfs = 1;
+block_structure_stat.block(3).equation = [ 8];
+block_structure_stat.block(3).variable = [ 8];
+block_structure_stat.block(4).Simulation_Type = 6;
+block_structure_stat.block(4).endo_nbr = 3;
+block_structure_stat.block(4).mfs = 1;
+block_structure_stat.block(4).equation = [ 4 5 6];
+block_structure_stat.block(4).variable = [ 2 6 7];
+block_structure_stat.block(5).Simulation_Type = 3;
+block_structure_stat.block(5).endo_nbr = 1;
+block_structure_stat.block(5).mfs = 1;
+block_structure_stat.block(5).equation = [ 3];
+block_structure_stat.block(5).variable = [ 5];
+block_structure_stat.block(6).Simulation_Type = 3;
+block_structure_stat.block(6).endo_nbr = 1;
+block_structure_stat.block(6).mfs = 1;
+block_structure_stat.block(6).equation = [ 7];
+block_structure_stat.block(6).variable = [ 1];
+M_.block_structure_stat.block = block_structure_stat.block;
+M_.block_structure_stat.variable_reordered = [ 3 4 8 2 6 7 5 1];
+M_.block_structure_stat.equation_reordered = [ 1 2 8 4 5 6 3 7];
+M_.block_structure_stat.incidence.sparse_IM = [1 3;
+2 4;
+3 5;
+3 6;
+4 2;
+4 6;
+4 7;
+5 4;
+5 6;
+5 7;
+6 2;
+6 3;
+6 7;
+7 1;
+7 5;
+7 7;
+8 8;
+];
 M_.params(1) = 2;
 sigma = M_.params(1);
 M_.params(2) = 1.5;
@@ -178,17 +361,24 @@ M_.params(5) = 0.025;
 delta = M_.params(5);
 M_.params(6) = 0.95;
 rho = M_.params(6);
+Rss = 1/beta -(1-delta);
+Wss = (1-alpha)*(alpha/Rss)^(alpha/(1-alpha));
+Yss = (Rss/(Rss - delta*alpha))^(sigma/(sigma+varpi)) * (Wss*(Wss/(1-alpha))^varpi)^(1/(sigma+varpi));
+Iss = (delta*alpha / Rss)*Yss;
+Css = 1/(Yss^(varpi/sigma)) * ((1-alpha)^(-varpi) * Wss^(1+varpi))^(1/sigma);
+Kss = alpha*(Yss/Rss);
+Lss = (1-alpha)*(Yss/Wss);
 %
 % INITVAL instructions
 %
 options_.initval_file = false;
-oo_.steady_state(1) = c;
-oo_.steady_state(2) = l;
-oo_.steady_state(3) = w;
-oo_.steady_state(4) = r;
-oo_.steady_state(5) = i;
-oo_.steady_state(6) = k;
-oo_.steady_state(7) = y;
+oo_.steady_state(1) = Css;
+oo_.steady_state(2) = Lss;
+oo_.steady_state(3) = Wss;
+oo_.steady_state(4) = Rss;
+oo_.steady_state(5) = Iss;
+oo_.steady_state(6) = Kss;
+oo_.steady_state(7) = Yss;
 if M_.exo_nbr > 0
 	oo_.exo_simul = ones(M_.maximum_lag,1)*oo_.exo_steady_state';
 end
@@ -199,13 +389,6 @@ steady;
 oo_.dr.eigval = check(M_,options_,oo_);
 model_diagnostics(M_,options_,oo_);
 model_info();
-%
-% SHOCKS instructions
-%
-M_.exo_det_length = 0;
-M_.Sigma_e(1, 1) = (0.01)^2;
-var_list_ = {};
-[info, oo_, options_, M_] = stoch_simul(M_, options_, oo_, var_list_);
 save('dsge_results.mat', 'oo_', 'M_', 'options_');
 if exist('estim_params_', 'var') == 1
   save('dsge_results.mat', 'estim_params_', '-append');

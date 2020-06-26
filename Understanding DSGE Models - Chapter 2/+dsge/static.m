@@ -1,12 +1,20 @@
-function [residual, g1, g2, g3] = static(y, x, params)
-    T = NaN(5, 1);
-    if nargout <= 1
-        residual = dsge.static_resid(T, y, x, params, true);
-    elseif nargout == 2
-        [residual, g1] = dsge.static_resid_g1(T, y, x, params, true);
-    elseif nargout == 3
-        [residual, g1, g2] = dsge.static_resid_g1_g2(T, y, x, params, true);
-    else
-        [residual, g1, g2, g3] = dsge.static_resid_g1_g2_g3(T, y, x, params, true);
-    end
+function [residual, g1, y, var_index] = static(nblock, y, x, params)
+  residual = [];
+  g1 = [];
+  var_index = [];
+
+  switch nblock
+    case 1
+      [residual, y, g1] = dsge.block.static_1(y, x, params);
+    case 2
+      [residual, y, g1] = dsge.block.static_2(y, x, params);
+    case 3
+      [residual, y, g1] = dsge.block.static_3(y, x, params);
+    case 4
+      [residual, y, g1] = dsge.block.static_4(y, x, params);
+    case 5
+      [residual, y, g1] = dsge.block.static_5(y, x, params);
+    case 6
+      [residual, y, g1] = dsge.block.static_6(y, x, params);
+  end
 end

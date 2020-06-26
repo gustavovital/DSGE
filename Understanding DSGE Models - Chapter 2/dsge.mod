@@ -16,6 +16,15 @@ beta = 0.985;
 delta = 0.025;
 rho = 0.95;
 
+//estado estacionario
+Rss = 1/beta -(1-delta);
+Wss = (1-alpha)*(alpha/Rss)^(alpha/(1-alpha));
+Yss = (Rss/(Rss - delta*alpha))^(sigma/(sigma+varpi)) * (Wss*(Wss/(1-alpha))^varpi)^(1/(sigma+varpi));
+Iss = (delta*alpha / Rss)*Yss;
+Css = 1/(Yss^(varpi/sigma)) * ((1-alpha)^(-varpi) * Wss^(1+varpi))^(1/sigma);
+Kss = alpha*(Yss/Rss);
+Lss = (1-alpha)*(Yss/Wss);
+
 //modelo
 model;
 C^sigma * L^varpi = W; // oferta de trabalho
@@ -30,23 +39,14 @@ end;
 
 //valores no estado estacionario
 initval;
-C = c;
-L = l;
-W = w;
-R = r;
-I = i;
-K = k;
-Y = y;
+C = Css;
+L = Lss;
+W = Wss;
+R = Rss;
+I = Iss;
+K = Kss;
+Y = Yss;
 end;
     
 //simulações
-steady;
-check;
-model_diagnostics;
-model_info;
-shocks;
-
-var e;
-stderr 0.01;
-end;
-stoch_simul;    
+//steady;
