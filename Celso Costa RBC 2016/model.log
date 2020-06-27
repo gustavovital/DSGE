@@ -1,0 +1,59 @@
+Starting preprocessing of the model file ...
+Found 8 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 2).
+Processing outputs ...
+done
+Preprocessing completed.
+                                          Informations about model (dynamic model)
+There is no block decomposition of the model.
+Use 'block' model's option.
+DYNARE_SOLVE (solve_algo=2|4): number of blocks = 4
+DYNARE_SOLVE (solve_algo=2|4): solving block 3, of size 1
+DYNARE_SOLVE (solve_algo=2|4): solving block 2, of size 1
+DYNARE_SOLVE (solve_algo=2|4): solving block 1, of size 6
+MODEL_DIAGNOSTICS:  No obvious problems with this mod-file were detected.
+
+
+
+
+Residuals of the static equations:
+
+Equation number 1 : 0 : 1
+Equation number 2 : 0 : 2
+Equation number 3 : 0 : K
+Equation number 4 : 0 : Y
+Equation number 5 : 0 : 5
+Equation number 6 : 0 : L
+Equation number 7 : -0.97124 : 7
+Equation number 8 : 0 : 8
+
+
+
+STEADY-STATE RESULTS:
+
+A 		 1
+R 		 0.0402284
+W 		 2.08361
+Y 		 2.33763
+I 		 0.508452
+C 		 1.82917
+L 		 0.729242
+K 		 20.3381
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+          0.9375           0.9375                0
+            0.95             0.95                0
+           1.068            1.068                0
+       5.232e+18       -5.232e+18                0
+
+
+There are 2 eigenvalue(s) larger than 1 in modulus 
+for 3 forward-looking variable(s)
+
+The rank condition ISN'T verified!
+
+Total computing time : 0h00m00s
