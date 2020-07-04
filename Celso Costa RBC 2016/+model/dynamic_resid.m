@@ -23,29 +23,29 @@ if T_flag
     T = model.dynamic_resid_tt(T, y, x, params, steady_state, it_);
 end
 residual = zeros(8, 1);
-lhs = T(1)*T(2);
-rhs = y(4);
+lhs = params(1)*y(5)+params(2)*y(9);
+rhs = y(8);
 residual(1) = lhs - rhs;
-lhs = y(11)/y(7);
-rhs = params(4)*(1-params(5)+y(10));
+lhs = params(1)/params(4)*(y(11)-y(5));
+rhs = T(2)*y(12);
 residual(2) = lhs - rhs;
-lhs = y(12);
-rhs = (1-params(5))*y(9)+y(6);
+lhs = y(7);
+rhs = (1-params(5))*y(1)+params(5)*y(4);
 residual(3) = lhs - rhs;
-lhs = y(5);
-rhs = y(2)*T(3)*T(4);
+lhs = y(3);
+rhs = y(10)+params(3)*y(1)+(1-params(3))*y(9);
 residual(4) = lhs - rhs;
-lhs = y(9);
-rhs = y(5)*params(3)/y(3);
+lhs = y(6);
+rhs = y(3)-y(1);
 residual(5) = lhs - rhs;
 lhs = y(8);
-rhs = y(5)*(1-params(3))/y(4);
+rhs = y(3)-y(9);
 residual(6) = lhs - rhs;
-lhs = y(5);
-rhs = y(7)+y(6);
+lhs = T(4)*y(3);
+rhs = y(5)*T(7)+T(6)*y(4);
 residual(7) = lhs - rhs;
-lhs = log(y(2));
-rhs = params(6)*log(y(1))+x(it_, 1);
+lhs = y(10);
+rhs = params(6)*y(2)+x(it_, 1);
 residual(8) = lhs - rhs;
 
 end

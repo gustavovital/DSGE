@@ -1,4 +1,4 @@
-%% Programa que simula e resolve um modelo RBC simples - baseado em 
+%% Programa que simula e resolve um modelo RBC simples  linearizado - baseado em 
 % Celso Costa
 
 %  Autor: Gustavo Vital

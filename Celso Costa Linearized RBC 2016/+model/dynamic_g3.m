@@ -1,5 +1,5 @@
-function g1 = dynamic_g1(T, y, x, params, steady_state, it_, T_flag)
-% function g1 = dynamic_g1(T, y, x, params, steady_state, it_, T_flag)
+function g3 = dynamic_g3(T, y, x, params, steady_state, it_, T_flag)
+% function g3 = dynamic_g3(T, y, x, params, steady_state, it_, T_flag)
 %
 % File created by Dynare Preprocessor from .mod file
 %
@@ -16,37 +16,12 @@ function g1 = dynamic_g1(T, y, x, params, steady_state, it_, T_flag)
 %   T_flag        boolean                    boolean  flag saying whether or not to calculate temporary terms
 %
 % Output:
-%   g1
+%   g3
 %
 
 if T_flag
-    T = model.dynamic_g1_tt(T, y, x, params, steady_state, it_);
+    T = model.dynamic_g3_tt(T, y, x, params, steady_state, it_);
 end
-g1 = zeros(8, 13);
-g1(1,5)=params(1);
-g1(1,8)=(-1);
-g1(1,9)=params(2);
-g1(2,5)=(-(params(1)/params(4)));
-g1(2,11)=params(1)/params(4);
-g1(2,12)=(-T(2));
-g1(3,4)=(-params(5));
-g1(3,1)=(-(1-params(5)));
-g1(3,7)=1;
-g1(4,3)=1;
-g1(4,1)=(-params(3));
-g1(4,9)=(-(1-params(3)));
-g1(4,10)=(-1);
-g1(5,3)=(-1);
-g1(5,6)=1;
-g1(5,1)=1;
-g1(6,3)=(-1);
-g1(6,8)=1;
-g1(6,9)=1;
-g1(7,3)=T(4);
-g1(7,4)=(-T(6));
-g1(7,5)=(-T(7));
-g1(8,2)=(-params(6));
-g1(8,10)=1;
-g1(8,13)=(-1);
+g3 = sparse([],[],[],8,2197);
 
 end

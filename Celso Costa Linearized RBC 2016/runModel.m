@@ -9,4 +9,4 @@ clear; clc;
 addpath C:\dynare\4.6.1\matlab
 
 %% Resolve o modelo
-dynare model.m
+dynare model

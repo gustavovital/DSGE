@@ -1,5 +1,5 @@
-function T = dynamic_g3_tt(T, y, x, params, steady_state, it_)
-% function T = dynamic_g3_tt(T, y, x, params, steady_state, it_)
+function T = dynamic_resid_tt(T, y, x, params, steady_state, it_)
+% function T = dynamic_resid_tt(T, y, x, params, steady_state, it_)
 %
 % File created by Dynare Preprocessor from .mod file
 %
@@ -18,9 +18,11 @@ function T = dynamic_g3_tt(T, y, x, params, steady_state, it_)
 %   T           [#temp variables by 1]       double  vector of temporary terms
 %
 
-assert(length(T) >= 7);
+assert(length(T) >= 4);
 
-T = model.dynamic_g2_tt(T, y, x, params, steady_state, it_);
-
+T(1) = y(7)^params(1);
+T(2) = y(8)^params(2);
+T(3) = y(9)^params(3);
+T(4) = y(8)^(1-params(3));
 
 end

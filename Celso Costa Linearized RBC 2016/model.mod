@@ -1,13 +1,6 @@
 // VARIAVEIS ENDOGENAS
 
-var Y ${Y}$ (long_name='Output')
-    I ${I}$ (long_name='Investiment')
-    C ${C}$ (long_name='Consumption')
-    R ${R}$ (long_name='Nominal Interest Rate')
-    K ${K}$ (long_name='Capital')
-    W ${W}$ (long_name='Wage')
-    L ${L}$ (long_name='Labor')
-    A ${A}$ (long_name='Tecnology');
+var A R W Y I C L K;
 
 // VARIAVEIS EXOGENAS
 
@@ -15,9 +8,7 @@ varexo e;
 
 // PARAMETROS
 
-parameters sigma ${\sigma}$ 
-           phi ${\varpi}$ 
-           alpha $$beta delta rho;
+parameters sigma phi alpha beta delta rho;
 
 sigma = 2;
 phi = 1.5;
