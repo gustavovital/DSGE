@@ -48,7 +48,7 @@ EIGENVALUES:
           0.9375           0.9375                0
             0.95             0.95                0
            1.068            1.068                0
-       5.232e+18       -5.232e+18                0
+        3.73e+19        -3.73e+19                0
 
 
 There are 2 eigenvalue(s) larger than 1 in modulus 
@@ -56,4 +56,4 @@ for 3 forward-looking variable(s)
 
 The rank condition ISN'T verified!
 
-Total computing time : 0h00m00s
+Total computing time : 0h00m05s

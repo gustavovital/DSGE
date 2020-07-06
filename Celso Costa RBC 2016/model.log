@@ -6,6 +6,45 @@ Computing dynamic model derivatives (order 2).
 Processing outputs ...
 done
 Preprocessing completed.
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.static_resid_tt', 'E:\DSGE\Celso Costa RBC 2016\+model\static_resid_tt.m', 16)" style="font-weight:bold">model.static_resid_tt</a> (<a href="matlab: opentoline('E:\DSGE\Celso Costa RBC 2016\+model\static_resid_tt.m',16,0)">line 16</a>)
+Assertion failed.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.static_g1_tt', 'E:\DSGE\Celso Costa RBC 2016\+model\static_g1_tt.m', 18)" style="font-weight:bold">model.static_g1_tt</a> (<a href="matlab: opentoline('E:\DSGE\Celso Costa RBC 2016\+model\static_g1_tt.m',18,0)">line 18</a>)
+T = model.static_resid_tt(T, y, x, params);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.static_resid_g1', 'E:\DSGE\Celso Costa RBC 2016\+model\static_resid_g1.m', 8)" style="font-weight:bold">model.static_resid_g1</a> (<a href="matlab: opentoline('E:\DSGE\Celso Costa RBC 2016\+model\static_resid_g1.m',8,0)">line 8</a>)
+        T = model.static_g1_tt(T, y, x, params);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.static', 'E:\DSGE\Celso Costa RBC 2016\+model\static.m', 6)" style="font-weight:bold">model.static</a> (<a href="matlab: opentoline('E:\DSGE\Celso Costa RBC 2016\+model\static.m',6,0)">line 6</a>)
+        [residual, g1] = model.static_resid_g1(T, y, x, params, true);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('evaluate_steady_state', 'C:\dynare\4.6.1\matlab\evaluate_steady_state.m', 249)" style="font-weight:bold">evaluate_steady_state</a> (<a href="matlab: opentoline('C:\dynare\4.6.1\matlab\evaluate_steady_state.m',249,0)">line 249</a>)
+        [fvec,jacob] = fh_static(ys_init,exo_ss, ...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('steady_', 'C:\dynare\4.6.1\matlab\steady_.m', 55)" style="font-weight:bold">steady_</a> (<a href="matlab: opentoline('C:\dynare\4.6.1\matlab\steady_.m',55,0)">line 55</a>)
+[steady_state,params,info] = evaluate_steady_state(oo_.steady_state,M_,options_,oo_,~options_.steadystate.nocheck);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('steady', 'C:\dynare\4.6.1\matlab\steady.m', 80)" style="font-weight:bold">steady</a> (<a href="matlab: opentoline('C:\dynare\4.6.1\matlab\steady.m',80,0)">line 80</a>)
+[oo_.steady_state,M_.params,info] = steady_(M_,options_,oo_);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'E:\DSGE\Celso Costa RBC 2016\+model\driver.m', 181)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('E:\DSGE\Celso Costa RBC 2016\+model\driver.m',181,0)">line 181</a>)
+steady;
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\4.6.1\matlab\dynare.m', 293)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\4.6.1\matlab\dynare.m',293,0)">line 293</a>)
+evalin('base',[fname '.driver']) ;
+} 
+Using 64-bit preprocessor
+Starting Dynare (version 4.6.1).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ...
+Found 8 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 2).
+Processing outputs ...
+done
+Preprocessing completed.
+
 
 STEADY-STATE RESULTS:
 

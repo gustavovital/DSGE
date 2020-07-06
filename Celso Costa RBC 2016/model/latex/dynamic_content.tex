@@ -1,56 +1,116 @@
-\begin{dmath*}
-Pss = 1
-\end{dmath*}
-\begin{dmath*}
-Rss = {Pss}_{t}\, \left(\frac{1}{{beta}}-\left(1-{delta}\right)\right)
-\end{dmath*}
-\begin{dmath*}
-Wss = \left(1-{alpha}\right)\, {Pss}_{t}^{\frac{1}{1-{alpha}}}\, \left(\frac{{alpha}}{{Rss}_{t}}\right)^{\frac{{alpha}}{1-{alpha}}}
-\end{dmath*}
-\begin{dmath*}
-Yss = \left(\frac{{Rss}_{t}}{{Rss}_{t}-{delta}\, {alpha}}\right)^{\frac{{sigma}}{{sigma}+{phi}}}\, \left(\left(1-{alpha}\right)^{\left(-{phi}\right)}\, \left(\frac{{Wss}_{t}}{{Pss}_{t}}\right)^{1+{phi}}\right)^{\frac{1}{{sigma}+{phi}}}
-\end{dmath*}
-\begin{dmath*}
-Kss = {alpha}\, \frac{\frac{{Yss}_{t}}{{Rss}_{t}}}{{Pss}_{t}}
-\end{dmath*}
-\begin{dmath*}
-Iss = {delta}\, {Kss}_{t}
-\end{dmath*}
-\begin{dmath*}
-Css = {Yss}_{t}-{Iss}_{t}
-\end{dmath*}
-\begin{dmath*}
-Lss = \left(1-{alpha}\right)\, \frac{\frac{{Yss}_{t}}{{Wss}_{t}}}{{Pss}_{t}}
-\end{dmath*}
 % Equation 1
 \begin{dmath}
-{sigma}\, {{C}}_{t}+{phi}\, {{L}}_{t}={{W}}_{t}
+{{\frac{W}{P}}}_{t}={{C}}_{t}^{{{\sigma}}}\, {{N}}_{t}^{{{\varphi}}}
 \end{dmath}
 % Equation 2
 \begin{dmath}
-\frac{{sigma}}{{beta}}\, \left({{C}}_{t+1}-{{C}}_{t}\right)={Rss}_{t}\, {{R}}_{t+1}
+{{Q}}_{t}=\frac{{{\beta}}\, \left(\frac{{{C}}_{t+1}}{{{C}}_{t}}\right)^{\left(-{{\sigma}}\right)}\, \frac{{{Z}}_{t+1}}{{{Z}}_{t}}}{{{\Pi}}_{t+1}}
 \end{dmath}
 % Equation 3
 \begin{dmath}
-{{K}}_{t}=\left(1-{delta}\right)\, {{K}}_{t-1}+{delta}\, {{I}}_{t}
+{{R^n}}_{t}=\frac{1}{{{Q}}_{t}}
 \end{dmath}
 % Equation 4
 \begin{dmath}
-{{Y}}_{t}={{A}}_{t}+{alpha}\, {{K}}_{t-1}+\left(1-{alpha}\right)\, {{L}}_{t}
+{{Y}}_{t}={{A}}_{t}\, \left(\frac{{{N}}_{t}}{{{S}}_{t}}\right)^{1-{{\alpha}}}
 \end{dmath}
 % Equation 5
 \begin{dmath}
-{{R}}_{t}={{Y}}_{t}-{{K}}_{t-1}
+{{R^n}}_{t}={{\Pi}}_{t+1}\, {{R^{r}}}_{t}
 \end{dmath}
 % Equation 6
 \begin{dmath}
-{{W}}_{t}={{Y}}_{t}-{{L}}_{t}
+{{C}}_{t}={{Y}}_{t}
 \end{dmath}
 % Equation 7
 \begin{dmath}
-{Yss}_{t}\, {{Y}}_{t}={{C}}_{t}\, {Css}_{t}+{Iss}_{t}\, {{I}}_{t}
+\log\left({{A}}_{t}\right)={{\rho_a}}\, \log\left({{A}}_{t-1}\right)+{{\varepsilon_a}}_{t}
 \end{dmath}
 % Equation 8
 \begin{dmath}
-{{A}}_{t}={rhoa}\, {{A}}_{t-1}+{e}_{t}
+\log\left({{Z}}_{t}\right)={{\rho_{z}}}\, \log\left({{Z}}_{t-1}\right)-{{\varepsilon_z}}_{t}
+\end{dmath}
+% Equation 9
+\begin{dmath}
+{{\Delta m_q}}_{t}=\log\left(\frac{{{M/P}}_{t}}{{{M/P}}_{t-1}}\, {{\Pi}}_{t}\right)
+\end{dmath}
+% Equation 10
+\begin{dmath}
+{{\Delta m_q}}_{t}={{\rho_{\zeta}}}\, {{\Delta m_q}}_{t-1}+{{\varepsilon_m}}_{t}
+\end{dmath}
+% Equation 11
+\begin{dmath}
+{{\Delta m^{ann}}}_{t}={{\Delta m_q}}_{t}\, 4
+\end{dmath}
+% Equation 12
+\begin{dmath}
+{{mc}}_{t}=\frac{{{\frac{W}{P}}}_{t}}{{{S}}_{t}\, \frac{{{Y}}_{t}\, \left(1-{{\alpha}}\right)}{{{N}}_{t}}}
+\end{dmath}
+% Equation 13
+\begin{dmath}
+1={{\theta}}\, {{\Pi}}_{t}^{{{\epsilon}}-1}+\left(1-{{\theta}}\right)\, {{\Pi^*}}_{t}^{1-{{\epsilon}}}
+\end{dmath}
+% Equation 14
+\begin{dmath}
+{{S}}_{t}=\left(1-{{\theta}}\right)\, {{\Pi^*}}_{t}^{\frac{\left(-{{\epsilon}}\right)}{1-{{\alpha}}}}+{{\theta}}\, {{\Pi}}_{t}^{\frac{{{\epsilon}}}{1-{{\alpha}}}}\, {{S}}_{t-1}
+\end{dmath}
+% Equation 15
+\begin{dmath}
+{{\Pi^*}}_{t}^{1+{{\epsilon}}\, \frac{{{\alpha}}}{1-{{\alpha}}}}=\frac{{{\epsilon}}\, \frac{{{x_1}}_{t}}{{{x_2}}_{t}}\, \left(1-{{\tau}}\right)}{{{\epsilon}}-1}
+\end{dmath}
+% Equation 16
+\begin{dmath}
+{{x_1}}_{t}={{mc}}_{t}\, {{Y}}_{t}\, {{Z}}_{t}\, {{C}}_{t}^{\left(-{{\sigma}}\right)}+{{\beta}}\, {{\theta}}\, {{\Pi}}_{t+1}^{{{\epsilon}}+\frac{{{\alpha}}\, {{\epsilon}}}{1-{{\alpha}}}}\, {{x_1}}_{t+1}
+\end{dmath}
+% Equation 17
+\begin{dmath}
+{{x_2}}_{t}={{Y}}_{t}\, {{Z}}_{t}\, {{C}}_{t}^{\left(-{{\sigma}}\right)}+{{\beta}}\, {{\theta}}\, {{\Pi}}_{t+1}^{{{\epsilon}}-1}\, {{x_2}}_{t+1}
+\end{dmath}
+% Equation 18
+\begin{dmath}
+{{log(Y)}}_{t}=\log\left({{Y}}_{t}\right)
+\end{dmath}
+% Equation 19
+\begin{dmath}
+{{log(W/P)}}_{t}=\log\left({{\frac{W}{P}}}_{t}\right)
+\end{dmath}
+% Equation 20
+\begin{dmath}
+{{log(N)}}_{t}=\log\left({{N}}_{t}\right)
+\end{dmath}
+% Equation 21
+\begin{dmath}
+{{\pi^{ann}}}_{t}=4\, \log\left({{\Pi}}_{t}\right)
+\end{dmath}
+% Equation 22
+\begin{dmath}
+{{i^{ann}}}_{t}=4\, \log\left({{R^n}}_{t}\right)
+\end{dmath}
+% Equation 23
+\begin{dmath}
+{{r^{r,ann}}}_{t}=4\, \log\left({{R^{r}}}_{t}\right)
+\end{dmath}
+% Equation 24
+\begin{dmath}
+{{M/P}}_{t}=\frac{{{Y}}_{t}}{{{R^n}}_{t}^{{{\eta}}}}
+\end{dmath}
+% Equation 25
+\begin{dmath}
+{{log(M)}}_{t}=\log\left({{M/P}}_{t}\, {{P}}_{t}\right)
+\end{dmath}
+% Equation 26
+\begin{dmath}
+{{\Pi}}_{t}=\frac{{{P}}_{t}}{{{P}}_{t-1}}
+\end{dmath}
+% Equation 27
+\begin{dmath}
+{{log(P)}}_{t}=\log\left({{P}}_{t}\right)
+\end{dmath}
+% Equation 28
+\begin{dmath}
+{{log(A)}}_{t}=\log\left({{A}}_{t}\right)
+\end{dmath}
+% Equation 29
+\begin{dmath}
+{{log(Z)}}_{t}=\log\left({{Z}}_{t}\right)
 \end{dmath}
