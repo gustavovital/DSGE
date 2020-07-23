@@ -1,0 +1,66 @@
+Starting preprocessing of the model file ...
+Found 3 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 2).
+Processing outputs ...
+done
+Preprocessing completed.
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+            0.95             0.95                0
+          0.9955           0.9955                0
+           8.474            8.474                0
+       7.944e+16        7.944e+16                0
+
+
+There are 2 eigenvalue(s) larger than 1 in modulus 
+for 2 forward-looking variable(s)
+
+The rank condition is verified.
+
+
+MODEL SUMMARY
+
+  Number of variables:         3
+  Number of stochastic shocks: 1
+  Number of state variables:   2
+  Number of jumpers:           2
+  Number of static variables:  0
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables           e
+e            0.490000
+
+POLICY AND TRANSITION FUNCTIONS
+                                   c               k               a
+k(-1)                       0.399437        0.995486               0
+a(-1)                       0.944592        0.124496        0.950000
+e                           0.994307        0.131048        1.000000
+
+
+THEORETICAL MOMENTS
+VARIABLE         MEAN  STD. DEV.   VARIANCE
+c              0.0000     8.3018    68.9204
+k              0.0000    18.5324   343.4481
+a              0.0000     2.2418     5.0256
+
+
+
+MATRIX OF CORRELATIONS
+Variables         c       k       a
+c            1.0000  0.9700  0.5159
+k            0.9700  1.0000  0.2920
+a            0.5159  0.2920  1.0000
+
+
+
+COEFFICIENTS OF AUTOCORRELATION
+Order          1       2       3       4       5
+c         0.9965  0.9929  0.9893  0.9857  0.9821
+k         0.9999  0.9995  0.9990  0.9983  0.9973
+a         0.9500  0.9025  0.8574  0.8145  0.7738
+Total computing time : 0h00m01s
