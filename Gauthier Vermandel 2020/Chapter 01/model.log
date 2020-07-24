@@ -33,7 +33,7 @@ MODEL SUMMARY
 
 MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
 Variables           e
-e            0.490000
+e            0.000049
 
 POLICY AND TRANSITION FUNCTIONS
                                    c               k               a
@@ -44,9 +44,9 @@ e                           0.994307        0.131048        1.000000
 
 THEORETICAL MOMENTS
 VARIABLE         MEAN  STD. DEV.   VARIANCE
-c              0.0000     8.3018    68.9204
-k              0.0000    18.5324   343.4481
-a              0.0000     2.2418     5.0256
+c              0.0000     0.0830     0.0069
+k              0.0000     0.1853     0.0343
+a              0.0000     0.0224     0.0005
 
 
 

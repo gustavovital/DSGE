@@ -152,9 +152,10 @@ Css = M_.params(5);
 % SHOCKS instructions
 %
 M_.exo_det_length = 0;
-M_.Sigma_e(1, 1) = (.7)^2;
+M_.Sigma_e(1, 1) = (.007)^2;
 oo_.dr.eigval = check(M_,options_,oo_);
-options_.irf = 30;
+options_.irf = 40;
+options_.nodisplay = true;
 var_list_ = {'c';'k';'a'};
 [info, oo_, options_, M_] = stoch_simul(M_, options_, oo_, var_list_);
 save('model_results.mat', 'oo_', 'M_', 'options_');

@@ -50,4 +50,4 @@ end;
 check;
 
 // ====================== Simulations =======================
-stoch_simul(irf=30) c k a;
+stoch_simul(irf=40, nodisplay) c k a;
