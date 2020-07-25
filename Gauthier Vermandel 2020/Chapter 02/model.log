@@ -1,0 +1,155 @@
+Starting preprocessing of the model file ...
+Found 4 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 2).
+Processing outputs ...
+done
+Preprocessing completed.
+Initial value of the log posterior (or likelihood): 923.547
+-----------------
+f at the beginning of new iteration,      -923.5469933020
+Predicted improvement:    51271.597969472
+lambda =          1; f =          613.2993321
+lambda =    0.33333; f =          292.6910847
+lambda =    0.11111; f =          -25.3237764
+lambda =   0.037037; f =         -335.4164731
+lambda =   0.012346; f =         -621.2972543
+lambda =  0.0041152; f =         -840.8521337
+lambda =  0.0013717; f =         -941.8252861
+lambda = 0.00045725; f =         -949.6339518
+Norm of dx     3.2022
+----
+Improvement on iteration 1 =       26.086958537
+-----------------
+f at the beginning of new iteration,      -949.6339518387
+Predicted improvement:        1.516452135
+lambda =          1; f =         -951.7820549
+lambda =     1.9332; f =         -952.4061574
+Norm of dx 0.00042275
+----
+Improvement on iteration 2 =        2.772205571
+-----------------
+f at the beginning of new iteration,      -952.4061574099
+Predicted improvement:        0.000937407
+lambda =          1; f =         -952.4073405
+Norm of dx 1.4745e-05
+----
+Improvement on iteration 3 =        0.001183138
+-----------------
+f at the beginning of new iteration,      -952.4073405480
+Predicted improvement:        0.000052088
+lambda =          1; f =         -952.4074061
+Norm of dx 3.9096e-06
+----
+Improvement on iteration 4 =        0.000065589
+-----------------
+f at the beginning of new iteration,      -952.4074061367
+Predicted improvement:        0.000000001
+lambda =          1; f =         -952.4074062
+lambda =     1.9332; f =         -952.4074063
+lambda =     3.7372; f =         -952.4074064
+lambda =     7.2247; f =         -952.4074066
+lambda =     13.967; f =         -952.4074068
+lambda =         27; f =         -952.4074071
+lambda =     52.196; f =         -952.4074062
+Norm of dx 1.9669e-08
+----
+Improvement on iteration 5 =        0.000000914
+-----------------
+f at the beginning of new iteration,      -952.4074070511
+Predicted improvement:        0.000000886
+lambda =          1; f =         -952.4074062
+lambda =    0.33333; f =         -952.4074070
+lambda =    0.11111; f =         -952.4074070
+lambda =   0.037037; f =         -952.4074071
+lambda =   0.012346; f =         -952.4074071
+lambda =  0.0041152; f =         -952.4074071
+lambda =  0.0013717; f =         -952.4074071
+lambda = 0.00045725; f =         -952.4074071
+lambda = 0.00015242; f =         -952.4074071
+lambda = 5.0805e-05; f =         -952.4074071
+lambda = 1.6935e-05; f =         -952.4074071
+lambda =  5.645e-06; f =         -952.4074071
+lambda = 1.8817e-06; f =         -952.4074071
+lambda = 6.2723e-07; f =         -952.4074071
+lambda = 2.0908e-07; f =         -952.4074071
+lambda = 6.9692e-08; f =         -952.4074071
+lambda = 2.3231e-08; f =         -952.4074071
+lambda = 7.7435e-09; f =         -952.4074071
+lambda = 2.5812e-09; f =         -952.4074071
+Norm of dx 5.1138e-07
+----
+Improvement on iteration 6 =        0.000000000
+improvement < crit termination
+smallest step still improving too slow
+
+Final value of minus the log posterior (or likelihood):-952.407407 
+
+RESULTS FROM MAXIMUM LIKELIHOOD ESTIMATION
+standard deviation of shocks
+    Estimate    s.d. t-stat
+
+e   0.0093  0.0004 24.2265 
+
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+            0.95             0.95                0
+          0.9945           0.9945                0
+           7.624            7.624                0
+        1.25e+18         1.25e+18                0
+
+
+There are 2 eigenvalue(s) larger than 1 in modulus 
+for 2 forward-looking variable(s)
+
+The rank condition is verified.
+
+
+MODEL SUMMARY
+
+  Number of variables:         4
+  Number of stochastic shocks: 1
+  Number of state variables:   2
+  Number of jumpers:           2
+  Number of static variables:  1
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables           e
+e            0.000049
+
+POLICY AND TRANSITION FUNCTIONS
+                                   c               k               a               y
+k(-1)                       0.398029        0.994502               0        0.400000
+a(-1)                       0.940519        0.125767        0.950000        0.950000
+e                           0.990020        0.132386        1.000000        1.000000
+
+
+THEORETICAL MOMENTS
+VARIABLE         MEAN  STD. DEV.   VARIANCE
+c              0.0000     0.0767     0.0059
+k              0.0000     0.1682     0.0283
+a              0.0000     0.0224     0.0005
+y              0.0000     0.0771     0.0059
+
+
+
+MATRIX OF CORRELATIONS
+Variables         c       k       a       y
+c            1.0000  0.9657  0.5546  1.0000
+k            0.9657  1.0000  0.3195  0.9654
+a            0.5546  0.3195  1.0000  0.5557
+y            1.0000  0.9654  0.5557  1.0000
+
+
+
+COEFFICIENTS OF AUTOCORRELATION
+Order          1       2       3       4       5
+c         0.9959  0.9918  0.9876  0.9833  0.9791
+k         0.9999  0.9995  0.9988  0.9979  0.9968
+a         0.9500  0.9025  0.8574  0.8145  0.7738
+y         0.9959  0.9917  0.9875  0.9832  0.9789
+Total computing time : 0h00m04s
