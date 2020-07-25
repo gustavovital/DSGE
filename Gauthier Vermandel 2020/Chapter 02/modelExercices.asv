@@ -7,7 +7,9 @@ var
 c       ${C}$   (long_name='Consumption')
 k       ${K}$   (long_name='Capital')
 a       ${A}$   (long_name='Tecnology')
-y       ${Y}$   (long_name='Production');
+y       ${Y}$   (long_name='Production')
+i       ${I}$   (long_name='Investiment')
+g       ${G}$   (long_name='Government Spend')
 
 // ===================== Parameters ========================
 parameters
@@ -23,46 +25,57 @@ gamma   ${\gamma}$  (long_name='Trend Factor');
 // ====================== shocks ============================
 varexo
 
-e       ${e}$       (long_name='Produtivity shock');
+e_a     ${e_a}$       (long_name='Produtivity shock');
 
 // ====================== Calibration =======================
 alpha   =   0.40;
 beta    =   0.99;
 delta   =   0.025;
-rho     =   0.95;
+rho_a   =   0.95;
+rho_g   =   0.95;
 gamma   =   1.0078;
+gy      =   0.2;
 Kss     =   (gamma/beta - 1 + delta)*(1/alpha)^(1/(alpha-1));
-Css     =   Kss^alpha - (1-delta-gamma)*Kss;
+Iss     =   (gamma - 1 - delta)*Kss;
+Yss     =   Kss^alpha;
+Css     =   (1 - gy)*Yss - Iss; 
 
 // ======================== Model ===========================
 model(linear);
     [name='Euler']
-    c = c(+1) - beta/gamma*alpha*Kss*(a(+1) + (alpha-1)*k);
-    [name='Constraint']
-    k = Kss^(alpha-1) * (a + alpha*k(-1)) + (1 - delta)*k(-1) - Css*c/Kss;
-    [name='Produtivity Shock']
-    a = rho*a(-1) + e;
+    c = -beta/gamma * (a(+1) - (1-alpha)*k) + beta*(a*Kss^(alpha-1) + (1-delta))*c(+1);
+
     [name='Production']
-    y = a + alpha*k(-1);
+    y = a + alpha*k(-1);    
+    
+    [name='Identity']
+    Yss*y = Css*c + Iss*i + gy*Yss*g;
+    
+    [name='Investiment']
+    Iss*i = gamma*Kss*k - (1 - delta)*Kss*k(-1);
+    
+    [name='Produtivity Shock']
+    a = rho_a*a(-1) + e;
 end;
 
 // ===================== Observed Variable ==================
 varobs y;
 
-//estimated_params;
-	stderr	e,      0.007;
-			rho,    0.95,	0,	1;
+estimated_params;
+	stderr	e,  0.007,	0,	inf;
 end;
+
+// ======================== Estimation ======================
+estimation(datafile='mydata.mat') y;
 
 // ========================= Shocks =========================
 shocks;
    var e; stderr .007;
 end;
 
-// ======================== Estimation ======================
-estimation(datafile='mydata.mat');
+
 // ========================= Checks =========================
-//check;
+check;
 
 // ====================== Simulations =======================
 stoch_simul(irf=40) c k a y;

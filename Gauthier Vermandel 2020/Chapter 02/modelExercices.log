@@ -1,0 +1,90 @@
+Starting preprocessing of the model file ...
+Found 6 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 2).
+Processing outputs ...
+done
+Preprocessing completed.
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+         0.04067          0.04067                0
+            0.95             0.95                0
+            0.95             0.95                0
+           24.65            24.65                0
+             Inf             -Inf                0
+
+
+There are 2 eigenvalue(s) larger than 1 in modulus 
+for 2 forward-looking variable(s)
+
+The rank condition is verified.
+
+
+MODEL SUMMARY
+
+  Number of variables:         6
+  Number of stochastic shocks: 2
+  Number of state variables:   3
+  Number of jumpers:           2
+  Number of static variables:  2
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables         e_a       e_g
+e_a          0.000100  0.000000
+e_g          0.000000  0.000100
+
+POLICY AND TRANSITION FUNCTIONS
+                                   c               k               a               y               i               g
+k(-1)                       0.569936        0.040667               0        0.400000       54.303235               0
+g(-1)                      -0.245367        0.107348               0               0       -6.289843        0.950000
+a(-1)                       1.144505        0.544258        0.950000        0.950000      -31.889719               0
+e_a                         1.204742        0.572903        1.000000        1.000000      -33.568125               0
+e_g                        -0.258281        0.112998               0               0       -6.620887        1.000000
+
+
+THEORETICAL MOMENTS
+VARIABLE         MEAN  STD. DEV.   VARIANCE
+c              0.0000     0.0494     0.0024
+k              0.0000     0.0195     0.0004
+a              0.0000     0.0320     0.0010
+y              0.0000     0.0394     0.0016
+i              0.0000     0.3428     0.1175
+g              0.0000     0.0320     0.0010
+
+
+
+VARIANCE DECOMPOSITION (in percent)
+        e_a     e_g
+c     98.39    1.61
+k     96.26    3.74
+a    100.00    0.00
+y     99.85    0.15
+i     96.26    3.74
+g      0.00  100.00
+
+
+
+MATRIX OF CORRELATIONS
+Variables         c       k       a       y       i       g
+c            1.0000  0.9472  0.9895  0.9867 -0.1872 -0.1261
+k            0.9472  1.0000  0.9810  0.9863 -0.2568  0.1935
+a            0.9895  0.9810  1.0000  0.9974 -0.2640  0.0000
+y            0.9867  0.9863  0.9974  1.0000 -0.2057  0.0363
+i           -0.1872 -0.2568 -0.2640 -0.2057  1.0000 -0.0521
+g           -0.1261  0.1935  0.0000  0.0363 -0.0521  1.0000
+
+
+
+COEFFICIENTS OF AUTOCORRELATION
+Order          1       2       3       4       5
+c         0.9662  0.9186  0.8727  0.8290  0.7876
+k         0.9538  0.9063  0.8610  0.8179  0.7770
+a         0.9500  0.9025  0.8574  0.8145  0.7738
+y         0.9655  0.9179  0.8720  0.8284  0.7870
+i         0.0257 -0.0132 -0.0141 -0.0134 -0.0128
+g         0.9500  0.9025  0.8574  0.8145  0.7738
+Total computing time : 0h00m04s
