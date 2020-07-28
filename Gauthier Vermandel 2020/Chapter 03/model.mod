@@ -14,7 +14,7 @@ z       ${Z}$       (long_name='Capital Remuneration')
 h       ${H}$       (long_name='Hours of labor')
 e_a     ${e_a}$     (long_name='Produtivity shock')
 e_g     ${e_g}$     (long_name='Government shock')
-e_c     ${e_c}$     (long_name='Comsumption shock')
+e_c     ${e_c}$     (long_name='Consumption shock')
 e_i     ${e_i}$     (long_name='Investment shock');
 
 
@@ -29,7 +29,7 @@ rho_g       ${\rho_g}$      (long_name='AR(1) shock government')
 rho_c       ${\rho_c}$      (long_name='AR(1) shock comsumption')
 rho_i       ${\rho_i}$      (long_name='AR(1) shock investment')
 gy          ${gy}$          (long_name='Government Spending')
-sigma_c     ${\sigma_c}$    (long_name='Comsumption risk')
+sigma_c     ${\sigma_c}$    (long_name='Consumption risk')
 chi         ${\chi}$        (long_name='Labour parameter')
 sigma_l     ${\sigma_l}$    (long_name='Desutility of labor');  
 
@@ -50,7 +50,7 @@ varexo
 
 n_a     ${n_a}$     (long_name='Produtivity shock')
 n_g     ${n_g}$     (long_name='Government shock')
-n_c     ${n_c}$     (long_name='Comsumption shock')
+n_c     ${n_c}$     (long_name='Consumption shock')
 n_i     ${n_i}$     (long_name='Investment shock');
 
 // ======================== Model ===========================
