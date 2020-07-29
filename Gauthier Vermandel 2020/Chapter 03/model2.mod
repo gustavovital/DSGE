@@ -31,7 +31,8 @@ rho_i       ${\rho_i}$      (long_name='AR(1) shock investment')
 gy          ${gy}$          (long_name='Government Spending')
 sigma_c     ${\sigma_c}$    (long_name='Consumption risk')
 chi         ${\chi}$        (long_name='Labour parameter')
-sigma_l     ${\sigma_l}$    (long_name='Desutility of labor');  
+sigma_l     ${\sigma_l}$    (long_name='Desutility of labor')
+ch          ${c_h}$         (long_name='habit');  
 
 // ====================== Calibration =======================
 alpha       =   0.36;
@@ -44,6 +45,7 @@ rho_i       =   0.95;
 sigma_c     =   1;
 sigma_l     =   1;
 gy          =   0.2;
+ch          =   0.7;
 
 // ====================== shocks ============================
 varexo
@@ -57,7 +59,7 @@ n_i     ${n_i}$     (long_name='Investment shock');
 model;
 
 [name='Euler Equation']
-beta*r = (e_c/e_c(+1)) * (c(+1)/c)^sigma_c;
+beta*r = (e_c/e_c(+1)) * ((c(+1) - ch*c)/(c - ch*c(-1)))^sigma_c;
 
 [name='Labour supply']
 w = chi * (h^sigma_l )*(c^sigma_c);
