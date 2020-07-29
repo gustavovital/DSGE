@@ -1,0 +1,25 @@
+%% Start Dynare
+addpath C:\dynare\4.6.1\matlab
+
+%% Pre config
+clear; clc;
+
+%% Run model
+dynare model
+
+irfs = oo_;
+save('irfs', 'irfs');
+%% Run model
+dynare model2
+irfs2 = oo_;
+save('irfs2', 'irfs2');
+
+%% Compare habit formation
+clear; clc;
+
+load('irfs');
+load('irfs2');
+
+%% Graphs
+figure;
+plot(irfs.irfs.)
