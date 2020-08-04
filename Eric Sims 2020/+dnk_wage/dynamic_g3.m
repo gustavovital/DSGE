@@ -1,5 +1,5 @@
-function residual = dynamic_resid(T, y, x, params, steady_state, it_, T_flag)
-% function residual = dynamic_resid(T, y, x, params, steady_state, it_, T_flag)
+function g3 = dynamic_g3(T, y, x, params, steady_state, it_, T_flag)
+% function g3 = dynamic_g3(T, y, x, params, steady_state, it_, T_flag)
 %
 % File created by Dynare Preprocessor from .mod file
 %
@@ -16,36 +16,12 @@ function residual = dynamic_resid(T, y, x, params, steady_state, it_, T_flag)
 %   T_flag        boolean                    boolean  flag saying whether or not to calculate temporary terms
 %
 % Output:
-%   residual
+%   g3
 %
 
 if T_flag
-    T = model.dynamic_resid_tt(T, y, x, params, steady_state, it_);
+    T = dnk_wage.dynamic_g3_tt(T, y, x, params, steady_state, it_);
 end
-residual = zeros(8, 1);
-lhs = params(1)*y(5)+params(2)*y(9);
-rhs = y(8);
-residual(1) = lhs - rhs;
-lhs = params(1)/params(4)*(y(11)-y(5));
-rhs = T(2)*y(12);
-residual(2) = lhs - rhs;
-lhs = y(7);
-rhs = (1-params(5))*y(1)+params(5)*y(4);
-residual(3) = lhs - rhs;
-lhs = y(3);
-rhs = y(10)+params(3)*y(1)+(1-params(3))*y(9);
-residual(4) = lhs - rhs;
-lhs = y(6);
-rhs = y(3)-y(1)+x(it_, 2);
-residual(5) = lhs - rhs;
-lhs = y(8);
-rhs = y(3)-y(9);
-residual(6) = lhs - rhs;
-lhs = T(4)*y(3);
-rhs = y(5)*T(7)+T(6)*y(4);
-residual(7) = lhs - rhs;
-lhs = y(10);
-rhs = params(6)*y(2)+x(it_, 1);
-residual(8) = lhs - rhs;
+g3 = sparse([],[],[],24,54872);
 
 end

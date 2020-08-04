@@ -10,7 +10,7 @@ var Y ${Y}$ (long_name='Output')
     L ${L}$ (long_name='Labor')
     A ${A}$ (long_name='Tecnology');
 
-varexo e;
+varexo e n;
 
 parameters sigma phi alpha beta delta rhoa;
 sigma = 2;

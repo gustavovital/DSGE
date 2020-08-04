@@ -22,7 +22,7 @@ function g1 = dynamic_g1(T, y, x, params, steady_state, it_, T_flag)
 if T_flag
     T = model.dynamic_g1_tt(T, y, x, params, steady_state, it_);
 end
-g1 = zeros(8, 13);
+g1 = zeros(8, 14);
 g1(1,5)=params(1);
 g1(1,8)=(-1);
 g1(1,9)=params(2);
@@ -39,6 +39,7 @@ g1(4,10)=(-1);
 g1(5,3)=(-1);
 g1(5,6)=1;
 g1(5,1)=1;
+g1(5,14)=(-1);
 g1(6,3)=(-1);
 g1(6,8)=1;
 g1(6,9)=1;
