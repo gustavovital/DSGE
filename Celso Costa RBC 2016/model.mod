@@ -58,5 +58,4 @@ var e;
 stderr 0.01;
 end;
 
-
 stoch_simul;
