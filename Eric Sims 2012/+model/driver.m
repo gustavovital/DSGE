@@ -209,7 +209,7 @@ end
 % SHOCKS instructions
 %
 M_.exo_det_length = 0;
-M_.Sigma_e(1, 1) = 1;
+M_.Sigma_e(1, 1) = 0.1;
 steady;
 options_.irf = 100;
 var_list_ = {};

@@ -34,7 +34,7 @@ psi  = ((1-nss)*wss/nss)/(knss^alph-dlt*knss);
 model; 
 
 // processo tecnologico
-log(z) = rho*log(z(-1)) + sigz*ez;
+log(z) = rho*log(z(-1)) - sigz*ez;
 
 // juros = Pmg do Capital
 r = alph*z(+1)*(k(+1)/n(+1))^(alph-1) - dlt;
@@ -75,7 +75,7 @@ end;
 
 // choque (inovacao tecnologica)
 shocks;
-var ez = 1;
+var ez = 0.1;
 end;
 
 // inicio das simulacoes no estado estacionario
