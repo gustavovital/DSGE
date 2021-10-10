@@ -1,4 +1,4 @@
-## Repository to Organize some Replications of DSGE Models
+## Repository to organize some DSGE model replicas
 
 Most of the replications are from working papers, books or tutorials. Some of the codes **was not created by me**. Also, the most part of the paths and files was written in MATLAB (Iris Toolbox or Dynare), Julia (soon), or Python. Any suggestions are appreciated.
 
